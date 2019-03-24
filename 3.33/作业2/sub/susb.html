@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: "mircoft yahei";
+            font-size: 14px;
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .heart {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(29, 21, 21);
+            margin: 100px auto;
+            perspective: 1000;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            animation: ks 2s infinite;
+            transition: all;
+        }
+
+        .heart:before,
+        .heart:after {
+            position: absolute;
+            content: '';
+            width: 200px;
+            height: 200px;
+            display: block;
+            border-radius: 50%;
+            background-color: rgb(29, 21, 21);
+        }
+
+        .heart:before {
+            left: -100px;
+            bottom: 0;
+        }
+
+        .heart:after {
+            top: -100px;
+            right: 0;
+        }
+
+        /*.heart:hover {
+            transform:scale(1,1.2)
+        }*/
+
+        @keyframes ks {
+            0% {
+                transform: rotate(0)
+            }
+            25% {
+                transform: rotate(90deg)
+            }
+            50% {
+                transform: rotate(180deg)
+            }
+            75% {
+                transform: rotate(270deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        我是sub下的susb.html
+    </h1>
+
+    </head>
+
+    <body>
+        <div class="heart"></div>
+    </body>
+
+</html>

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
+		<title>task</title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		:root{
+			font-size: 1rem;
+		}
+		body{
+			background: url(image/bg.jpg);
+		}
+	
+		header{
+			position:relative;
+			width: auto;
+			height: 0;
+			padding-bottom: 33px;
+			background-color: #FFFFFF;
+			line-height: 34px;
+			color: #000;
+		}
+		#nav{
+			width:100%;
+ 		}
+		.div1{
+			width: 100%;
+			height: 920px;
+			background: url(image/images/bg1_02.jpg) no-repeat;
+		}
+		.div2{
+			height: 857px;
+			width: 1173px;
+			
+		}
+		.div3{
+			height:510px;
+			width: 1017px;
+			background-color:#007BFF ;
+		}
+		.div4{
+			width: 1017px;
+			height:510px;
+			background-color: #255625;
+		}
+		.div5{
+			width: 1017px;
+			height: 500px;
+			background-color: #843534;
+		}
+		a{
+			text-decoration: none;
+		}
+		#nav>div{
+			margin:0 auto;
+		}
+		@media only screen and (min-width:1000px){
+
+			.pull-left{
+				margin-left: 0
+			}
+		}
+		.pull-left{
+			display: inline-block;
+			margin-left:20rem;
+            		list-style-type:none;
+			color:#000;
+		}
+		.pull-left> li{
+			float:left;
+		}
+		.pull-right{
+    			position:relative;
+			top:0;
+			display: inline-block;
+			float: right;
+			margin-right: 7.7rem;
+			list-style-type:none;
+ 			
+		}
+		.pull-right> li{
+			float:left;
+		}
+		.pull-right a:first-child{
+			border-right:1px solid #ddd ;
+			padding-right: 2.5rem;
+		}
+		.pull-right a:nth-child(2){
+			padding-left: 2.5rem;
+			padding-right:2.5rem;
+			border-right:1px solid #ddd ;
+		}
+		.pull-right a:nth-child(3){
+			padding-left: 2.5remx;
+			padding-right: 2.5rem;
+			border-right:1px solid #ddd ;
+		}
+		.pull-right a:last-child{
+			padding-left: 2.5rem;
+		}
+		.one, .zero{
+			color:#d8d84cf2;
+		}
+		.pull-right> span{
+			color: #985F0D;
+		}
+		.clearfix :after {
+			CONTENT:"";
+			clear:both;
+		}
+		.div2>ul{
+			list-style-type:none;
+			display:inline-block;
+   		}
+ 		.div2-left> li{
+			float:left;
+		}
+		.div2-right> li{
+			float:left;
+		}
+                .div2 li:nth-child(2){
+			width:245px;
+			height:345px;
+			background-color:red;
+		}
+ 		.div2 li:last-child{
+			width:245px;
+			height:345px;
+			background-color:red;
+		}
+	</style>
+	<body>
+		<header>
+			<ul class="pull-left">
+			<li><a href="#" title="">xxxxxxm</a></li><li><span>,你好！&nbsp;&nbsp;&nbsp;(可用余额：<a href="#" title=""><a href="#" class="one">-1</a></a>)</span></li><li><a href="#" title="">[退出]</a></li></ul>
+			<ul class="pull-right"><li><a href="#" title="shopping"><img src="image/shopping_03.png"/>购物车<span class="zero">0</span></a></li><li><a href="#">Me的团购</a></li><li><a href="#">团购流程</a></li><li><a href="#">关于Me购</a></li></ul>
+		</header>
+<div class="clearfix"></div>
+		<div class="div1"></div>
+		<div id="nav">
+		<div class="div2">
+                      <ul class="div2-left">
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a><li>
+                      <li><a href="#"></a><li>
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a><li>
+                      <li><a href="#"></a><li>
+			<li></li>
+                    </ul>
+                      <ul class="div2-right">
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a></li>
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a></li>
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a></li>
+                      <li><a href="#"><img src="image/3_03.jpg" alt="" /></a></li>
+                   </ul>
+                </div>
+		<div class="div3">tupian</div>
+		<div class="div4">tupian</div>
+		<div class="div5">tupian</div>
+		</div>
+	</body>
+</html>

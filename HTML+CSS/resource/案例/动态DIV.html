@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>动态DIV演示</title>
+		<style> 
+			div{
+				width:100px;
+				height:100px;
+				font:20px/100px 微软雅黑;
+				text-align:center;
+				color:#fff;
+				background:red;
+				position:relative;
+				animation:myfirst 5s infinite;
+				-moz-animation:myfirst 5s infinite; /* Firefox */
+				-webkit-animation:myfirst 5s infinite; /* Safari and Chrome */
+				-o-animation:myfirst 5s infinite; /* Opera */
+			}
+			
+			@keyframes myfirst{
+				0%   {background:red; left:400px; top:100px;}
+				25%  {background:yellow; left:600px; top:100px;}
+				50%  {background:blue; left:600px; top:300px;}
+				75%  {background:green; left:400px; top:300px;}
+				100% {background:red; left:400px; top:100px;}
+			}
+			
+			@-moz-keyframes myfirst{ /* Firefox */
+				0%   {background:red; left:400px; top:100px;}
+				25%  {background:yellow; left:600px; top:100px;}
+				50%  {background:blue; left:600px; top:300px;}
+				75%  {background:green; left:400px; top:300px;}
+				100% {background:red; left:400px; top:100px;}
+			}
+			
+			@-webkit-keyframes myfirst{ /* Safari and Chrome */
+				0%   {background:red; left:400px; top:100px;}
+				25%  {background:yellow; left:600px; top:100px;}
+				50%  {background:blue; left:600px; top:300px;}
+				75%  {background:green; left:400px; top:300px;}
+				100% {background:red; left:400px; top:100px;}
+			}
+			
+			@-o-keyframes myfirst{ /* Opera */
+				0%   {background:red; left:400px; top:100px;}
+				25%  {background:yellow; left:600px; top:100px;}
+				50%  {background:blue; left:600px; top:300px;}
+				75%  {background:green; left:400px; top:300px;}
+				100% {background:red; left:400px; top:100px;}
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div>动态DIV</div>
+	
+	</body>
+</html>
