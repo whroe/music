@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./images/three.jpg" type="image/x-icon">
+    <title>打字</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            cursor: url(1.ico),auto;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+
+        #block {
+            width: 100%;
+            height: 355px;
+            font-size: 20px;
+            color: firebrick;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10" placeholder="输入.........."></textarea>
+    <div id="block"></div>
+    <script>
+        var index = 0;
+        var word = function () {
+            var Input = document.querySelector('textarea').value;
+            console.log(Input);
+            //Input = [...Input];
+            document.getElementById("block").innerText = Input.substring(0, index++);
+        }
+        setInterval('word()', 100);
+    </script>
+</body>
+
+</html>

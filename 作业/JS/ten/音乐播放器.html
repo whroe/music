@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>音乐播放器</title>
+  <!-- player.css -->
+  <link rel="shortcut icon" href="./images/music.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/player.css">
+  <script src="./js/index.js"></script>
+<script src="./js/project.js"></script>
+  <style>
+    #pu {
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      list-style: none;
+      background-color: #cccccc50;
+      overflow: hidden;
+      transition: all 1s;
+
+    }
+
+    .btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      background: url(./images/upseek.png) no-repeat;
+    }
+
+    .btn:hover {
+      background-position: 0px -63px;
+    }
+
+    .Transform {
+      /* transform: rotateZ(360deg);*/
+      transition: all 1s;
+      animation: all 4s linear infinite;
+
+    }
+
+    @keyframes all {
+      from {
+        transform: rotateZ(0deg);
+      }
+      to {
+        transform: rotateZ(360deg);
+      }
+    }
+    #lyric{
+      color:aqua;
+      font-size: 23px;
+      text-align: center;
+      width: 600px;
+      height: 35px;
+      line-height: 35px;
+      animation: Fcolor 1s linear infinite;
+    }
+    @keyframes Fcolor{
+      0%{color:aqua;}
+      10%{color: beige}
+      20%{color: red}
+      30%{color: rgb(245, 220, 237)}
+      40%{color: rgb(220, 245, 224)}
+      50%{color: rgb(220, 244, 245)}
+      60%{color: rgb(180, 180, 32)}
+      70%{color: rgb(117, 117, 108)}
+      80%{color: rgb(245, 220, 220)}
+      90%{color: rgb(220, 236, 245)}
+      100%{color: rgb(245, 220, 240)}
+    }
+  </style>
+
+</head>
+
+<body>
+  <ul id="pu">
+    <li>
+      <img src="./images/1-1.jpg" class="items" height="100px" alt="" date-src='./images/1.jpg'>
+    </li>
+    <li>
+      <img src="./images/2-2.jpg" class="items" height="100px" alt="" date-src='./images/2.jpg'>
+    </li>
+    <li>
+      <img src="./images/3-3.jpg" class="items" height="100px" alt="" date-src='./images/3.jpg'>
+    </li>
+    <li>
+      <img src="./images/4-4.jpg" class="items" height="100px" alt="" date-src='./images/4.jpg'>
+    </li>
+    <li>
+      <img src="./images/5-5.jpg" class="items" height="100px" alt="" date-src='./images/5.jpg'>
+    </li>
+    <li>
+      <img src="./images/6-6.jpg" class="items" height="100px" alt="" date-src='./images/6.jpg'>
+    </li>
+    <li>
+      <img src="./images/7-7.jpg" class="items" height="100px" alt="" date-src='./images/7.jpg'>
+    </li>
+    <li>
+      <img src="./images/8-8.jpg" class="items" height="100px" alt="" date-src='./images/8.jpg'>
+    </li>
+  </ul>
+  <p class="btn"></p>
+  <!--播放器-->
+  <div id="player">
+    <!--播放控件-->
+    <div id="playerControl">
+      <!-- 图片 -->
+      <div class="playerImg">
+        <!-- 图片 -->
+        <img src="./images/two.jpg" alt="" width="150" height="150" style="border-radius: 50%;">
+        <!-- 音乐 -->
+        <audio id="audio" src="./video/1.mp3"></audio>
+      </div>
+
+      <!-- 控制按钮 -->
+      <div id="pcontrol" class="clearfix">
+        <button id="prev" class="prev" title="上一曲"></button>
+        <button id="play" class="play1" title="播放"></button>
+        <button id="next" class="next" title="下一曲"></button>
+        <button id="stop" class="stop" title="停止"></button>
+      </div>
+    </div>
+
+    <!--播放进度-->
+    <div id="progrees">
+      <div id="curProgrees"></div>
+    </div>
+
+    <!--播放时间-->
+    <div id="playTime">
+      <span id="presentTime">00:00</span>
+      <span>/</span>
+      <span id="totalTime">00:00</span>
+    </div>
+
+    <!--音乐列表-->
+    <div id="playerList">
+      <ul>
+        <li class="active" id="list">
+          <span class="mr10">1</span>
+          <span>Contact</span>
+          <span>-</span>
+          <span>Lulleaux</span>
+        </li>
+        <li id="list">
+          <span class="mr10">2</span>
+          <span>西安人的歌</span>
+          <span>-</span>
+          <span>范炜与程渤智</span>
+        </li>
+        <li id="list">
+          <span class="mr10 list">3</span>
+          <span>Sunflower</span>
+          <span>-</span>
+          <span>Swae Lee</span>
+        </li>
+      </ul>
+    </div>
+    <div id="lyric"></div>
+    <ul style="display: none">
+      <li>Feel the beat of my heart For some luck than some spark from a second When we make contact boy It's a chain reaction
+        It's a physical-chemical interaction When we combine feel the satisfaction Deep inside my soul When we make contact
+        boy Feel the heat increase And the mind's racing Got me weakening the knees And the urge gasting I can barely breath
+        When you make contact with me I can kiss you right there Lass in the slow We can take our time Tell me what you want
+        boy I'll do anything make you feel alright And I need to feel your skin on mine We are just two of a kind</li>
+      <li>有一座城市 它让人难以割舍 　　有一种怀念 它叫做曾经来过 　　有一种旋律 它扯着嗓子唱歌 　　在他的中心人们叫它鼓楼钟楼 　　有人说西安水土让人变得懒惰 　　来打把挖坑 我教你撒叫生活 　　是谁对西安印象留在黄土高坡 　　来跟我唱一首咱西安人的歌
+        　　西安人的城墙下是西安人的火车 　　西安人不管到哪都不能不吃泡馍 　　西安大厦高楼 是连的一座一座 在西安人的心中 这是西安人的歌 　　600年的城墙如今让你随便触摸 　　西安的小吃足够让你变成吃货 　　在你的脚下曾经埋着王孙显赫
+        　　和平门下马陵是最低调的一个 　　西安的女娃喜欢有话撒都直说 　　就像这城门儿楼子四四方方的洒脱 　　给你说西安地灵说话不敢胡说 　　背后说谁坏话可小心不好过 　　西安人的城墙下是西安人的火车 　　西安人不管到哪都不能不吃泡馍
+        　　西安大厦高楼是连地一座一座 　　在西安人的心中这是西安人的歌 　　啦啦啦 　　西安城的故事 想说的太多太多 　　西安城的历史 也不会难以琢磨 　　看夕阳西下 就坐在护城河 　　怀里再抱上一本贾平凹的小说 　　西安人的城墙下是西安人的火车
+        　　西安人不管到哪都不能不吃泡馍 　　西安大厦高楼是连地一座一座 　　在西安人的心中 这是西安人的歌 　　这是西安人的歌 　　西安人的城墙下是西安人的火车 　　西安人不管到哪都不能不吃泡馍 　　西安大厦高楼是连地一座一座 　　在西安人的心中
+        这是西安人的歌 　　西安人的城墙下是西安人的火车 　　西安人不管到哪都不能不吃泡馍 　　西安大厦高楼是连地一座一座 　　在西安人的心中 这是西安人的歌 　　西安人的城墙下是西安人的火车 　　西安人不管到哪都不能不吃泡馍 　　西安大厦高楼是连地一座一座
+        　　在西安人的心中 这是西安人的歌 　　西安人的城墙下是西安人的火车 　　西安人不管到哪都不能不吃泡馍 　　西安大厦高楼是连地一座一座 　　在西安人的心中 这是西安人的歌</li>
+      <li>　Ayy ayy ayy ayy 　　Ooh 　　Ooh ooh ooh ohh 　　Ooh 　　Ayy ayy 　　Ooh ooh ooh ohh 　　Needless to say I keep her in check 　　She
+        was all bad bad nevertheless 　　Yeah 　　Callin' it quits now baby I'm a wreck 　　Wreck 　　Crash at my place baby you're
+        a wreck 　　Wreck 　　Needless to say I'm keeping her in check 　　She was all bad bad nevertheless 　　Callin' it quits
+        now baby I'm a wreck 　　Crash at my place baby you're a wreck 　　Thinkin' in a bad way losin' your grip 　　Screamin'
+        at my face baby don't trip 　　Someone took a big L don't know how that felt 　　Lookin' at you sideways party on tilt
+        　　Ooh ooh some things you just can't refuse 　　She wanna ride me like a cruise and I'm not tryna lose 　　Then you're
+        left in the dust unless I stuck by ya 　　You're the sunflower I think your love would be too much 　　Or you'll be left
+        in the dust unless I stuck by ya 　　You're the sunflower you're the sunflower 　　Post Malone： 　　Every time I'm leavin'
+        on ya 　　Ooh you don't make it easy no no 　　Wish I could be there for ya give me a reason to go 　　Every time I'm walkin'
+        out 　　I can hear you tellin' me to turn around 　　Fightin' for my trust and you won't back down 　　Even if we gotta
+        risk it all right now oh 　　I know you're scared of the unknown known 　　You don't wanna be alone 　　Alone 　　I know
+        I always come and go 　　And go 　　But it's out of my control 　　And you'll be left in the dust unless I stuck by ya
+        　　You're the sunflower I think your love would be too much 　　Or you'll be left in the dust unless I stuck by ya 　　You're
+        the sunflower you're the sunflower yeah</li>
+    </ul>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+.warpper{
+    width: 990px;
+    margin: 0 auto;
+}
+.main{
+    position: relative;
+    height: 476px;
+    background: #e53753;
+}
+.bg{
+    height: 476px;
+    background: url(../images/bg-ad.png);
+}
+footer{
+    padding: 10px;
+}
+footer>ul li{
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-right: 1px solid #999;
+}
+ul{
+    height: 16px;
+}
+p{
+    text-align: center;
+    padding-top: 6px;
+}
+/* 表单 */
+#Login{
+    width: 348px;
+    height: 333px;
+    position: absolute;
+    top: 10px;
+    right: 224px;
+    overflow: hidden;
+}
+.form1{
+    position: relative;
+    background: white;
+    width: 348px;
+    height: 333px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(345px);
+    transition: all 2s;
+    opacity: 0;
+}
+.form{
+    background: white;
+    width: 348px;
+    height: 333px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0px);
+    transition: all 2s;
+}
+.left{
+    position: absolute;
+    top:20px;
+    left:77px;
+    color:black;
+}
+.right{
+    position: absolute;
+    top:20px;
+    right:77px;
+    color:red;
+}
+.log{
+    font-size: 18px;
+    
+}
+input{
+    height: 40px;
+    width: 280px;
+    border:none;
+}
+.Inp-t{margin-bottom: 7px;}
+.Inp-b{margin-top: 7px;}
+.Inp-b,.Inp-t{
+    position: relative;
+    width:318px;
+    height:41px;
+    margin:10px auto;
+    border:1px solid #ccc;
+    font-size: 0;
+}
+.Inp-t img,.Inp-b img{
+    vertical-align: top;
+}
+.Inp-t input{
+    font-size: 12px;
+}
+.Inp-b input{
+    font-size: 12px;
+}
+.Inp-t i{
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    opacity: 0;
+}
+.Inp-b i{
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    opacity: 0;
+}
+.Fpwd{
+    margin-top: 20px;
+    text-align: right;
+}
+.Fpwd>a{
+    display: block;
+    margin-right: 15px;
+    color: #999;
+}
+.sub{
+    background: #e43a3d;
+    font-size: 20px;
+    color: white;
+    width: 306px;
+    height: 45px;
+}
+.dl{
+    margin: 20px 0 0 20px;
+}
+.loge{
+    height: 74px;
+}
+.qq{
+    margin-top: 27px;
+}
+.qq-itmes{
+    padding: 0 3px 0 35px;
+}
+.zhuce{
+    padding: 0 3px 0 161px;
+}

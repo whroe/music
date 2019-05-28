@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <title>京东</title>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="warpper">
+        <h1 class="warpper">
+            <img src="./images/logo2.jpg" alt="logo" title="京东">
+        </h1>
+    </header>
+    <!-- main -->
+    <main class="main">
+        <div class="bg warpper">
+            <div id="Login">
+                <div class="form" id="form">
+                    <form action="./音乐播放器.html" method="">
+                        <div class="loge" id="loge">
+                            <a href="#" class="left log">扫码登录</a>
+                            <a href="#" class="right log">账号登录</a>
+                        </div>
+                        <div class='Inp-t' id="Inp-t">
+                            <label>
+                                <img src="./images/people.png">
+                                <input type="text" name="username" placeholder="邮箱/用户名/已验证手机" class="Usm" required>
+                                <i class="iconfont icon-shanchu"></i>
+                            </label>
+                        </div>
+                        <div class="Inp-b" id="Inp-b">
+                            <label>
+                                <img src="./images/lock.png">
+                                <input type="password" name="pwd" placeholder="密码" class="Pwd" required>
+                                <i class="iconfont icon-shanchu"></i>
+                            </label>
+                        </div>
+                        <div class="Fpwd">
+                            <a href="#">忘记密码</a>
+                        </div>
+                        <div class="dl">
+                            <label>
+                                <input type="submit" name="" value="登录" class="sub">
+                            </label>
+                        </div>
+                        <div class="qq">
+                            <span class="qq-itmes">
+                                <img src="./images/QQ.png">QQ</span>
+                            <span>
+                                <IMG src="./images/weixin.png">微信</span>
+                            <span class="zhuce">
+                                <img src="">立即注册</span>
+                        </div>
+                    </form>
+                </div>
+                <!-- click -->
+                <div class="form1" id="form1">
+                    <form action="" method="">
+                        <div class="loge" id="loge1">
+                            <a href="#" class="left log">扫码登录</a>
+                            <a href="#" class="right log">账号登录</a>
+                        </div>
+                        <div>
+                            <img src="./images/1.jpg" alt="" width="348px" height="200px">
+                        </div>
+                        <div class="qq">
+                            <span class="qq-itmes">
+                                <img src="./images/QQ.png">QQ</span>
+                            <span>
+                                <IMG src="./images/weixin.png">微信</span>
+                            <span class="zhuce">
+                                <img src="">立即注册</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </main>
+    <!-- 页尾 -->
+    <footer class="warpper">
+        <ul>
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>人才招聘</li>
+            <li>商家入驻</li>
+            <li>广告服务</li>
+            <li>手机京东</li>
+            <li>友情链接</li>
+            <li>销售联盟</li>
+            <li>京东社区</li>
+            <li>京东公益</li>
+            <li>English slte</li>
+        </ul>
+        <p>Copyright&bscr; 2004 2019 京东JD.com版权所有</p>
+    </footer>
+    <script>
+        var Input = document.querySelector('#Inp-t input');
+        var Icon = document.querySelector('#Inp-t i');
+        var Input_b = document.querySelector('#Inp-b input');
+        var Icon_b = document.querySelector('#Inp-b i');
+        Input.addEventListener('input', function () {
+            var value = Input.value;
+            Icon.style.opacity = 1;
+            if (value == 0) {
+                Icon.style.opacity = 0;
+            }
+        })
+        //click
+        Icon.addEventListener('click', function () {
+            Input.value = '';
+            Icon.style.opacity = 0;
+        })
+        Input_b.addEventListener('input', function () {
+            var value = Input_b.value;
+            Icon_b.style.opacity = 1;
+            if (value == 0) {
+                Icon_b.style.opacity = 0;
+            }
+        })
+        Icon_b.addEventListener('click', function () {
+            Input_b.value = '';
+            Icon_b.style.opacity = 0;
+        })
+        //tab切换
+        var num = 4; var LeftLog = document.querySelector('#loge .left');
+        var RightLog = document.querySelector('#loge1 .right');
+        var Form1 = document.getElementById('form1');
+        var Form = document.getElementById('form');
+        LeftLog.addEventListener('click', function () {
+            Form1.style.transform = "translateX(345px)";
+            Form1.style.transform = "translateX(0px)";
+            Form1.style.opacity = 1;
+            Form.style.opacity = 0;
+        })
+        RightLog.addEventListener('click', function () {
+            Form.style.transform = "translateX(-345px)";
+            Form.style.transform = "translateX(0px)";
+            Form.style.opacity = 1;
+            Form1.style.opacity = 0;
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tab选项卡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #content{
+            width: 600px;
+            height: 600px;
+            position: fixed;
+            top: 0;
+            left:0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            overflow: hidden;
+            user-select: none;
+        }
+        ul{
+            list-style: none;
+            width: 600px;
+            height: 100px;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        ul>li{
+            width: 200px;
+            height: 100%;
+            float: left;
+            display: flex;
+            justify-content: space-around;
+            align-items: center; 
+        }
+        .active{
+            background: pink;
+            color: brown;
+            font-size: 24px;
+        }
+        #content div{
+            background: #ccc;
+            font-size: 30px; 
+            color:brown;
+            height: 500px;
+            text-align: center;
+            line-height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+    <ul class="clearfix">
+        <li class="active">首页</li>
+        <li>大事件</li>
+        <li>关于我们</li>
+    </ul>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+<script>
+    var List = document.querySelectorAll('ul li');
+    var Contain = document.querySelectorAll('#content div');
+    for (let i = 0; i < List.length; i++) {
+         List[i].addEventListener('click',function () {
+             for (let j = 0; j < List.length; j++) {
+                List[j].className='';
+                Contain[j].style.display='none';
+             }
+             List[i].className='active';
+            Contain[i].style.display='block';
+            })
+        }
+</script>
+</div>
+</body>
+</html>

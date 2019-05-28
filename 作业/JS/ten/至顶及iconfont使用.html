@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <title>回到顶部</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 5000px;
+        }
+        div {
+            position: fixed;
+            right: 25px;
+            bottom: 165px;
+            background: #ccc;
+            text-align: center;
+            width: 30px;
+            height: 117px;
+            opacity: 0;
+            transition: all 1s;
+            cursor: pointer;
+            user-select: none;
+        }
+        div:hover{
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <i class="iconfont icon-huojian"></i>回到顶部</div>
+        <script>
+            var Top = document.querySelector('#top');
+            window.onscroll = function() {
+                
+            var Scroll = document.documentElement.scrollTop;//滚动条到页面顶部的距离
+                if(Scroll>500){
+                    Top.style.opacity=1;
+                }else{
+                    Top.style.opacity=0;
+                }
+            }
+            Top.addEventListener('click',function(){
+                       // document.documentElement.scrollTop=0; 瞬间回到顶部
+                var timer = setInterval(function () {
+                    document.documentElement.scrollTop -= 100;
+                    if(document.documentElement.scrollTop<=0){
+                        clearInterval(timer);
+                    }
+                })
+            })
+        </script>
+</body>
+
+</html>
